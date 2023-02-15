@@ -8,7 +8,7 @@ int M = Convert.ToInt32(Console.ReadLine());
 int N = Convert.ToInt32(Console.ReadLine());
 
 
-int SumNumbers(int M, int N)
+int SumNumbersBetween(int M, int N)
 {   
     if (M == N) 
     {
@@ -16,12 +16,12 @@ int SumNumbers(int M, int N)
     }
     if (M < N)
     {
-        return N + SumNumbers(M, N - 1);
+        return N + SumNumbersBetween(M, N - 1);
     } 
     else
     {
-        return N + SumNumbers(M, N + 1);
+        return N + SumNumbersBetween(M, N + 1);
     }
 }
 
-System.Console.WriteLine(SumNumbers(M,N));
+System.Console.WriteLine(SumNumbersBetween(M,N));
